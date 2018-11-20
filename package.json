@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clipboard": "^2.0.4",
     "parcel-bundler": "^1.10.3",
     "uuid": "^3.3.2"
   }

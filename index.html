@@ -18,7 +18,10 @@
         </div>
         <div class="item">
             <h1 id="uuid">Waiting...</h1>
-            <button id="generate">Generate and Copy</button>
+            <button id="generate">Generate</button>
+            <button id="copy" data-clipboard-target="#uuid">
+                <img src="./clippy.svg" alt="Copy to clipboard">
+            </button>
         </div>
         <div>
             <ul id="history">
@@ -26,7 +29,6 @@
             </ul>
         </div>
     </div>
-
 
     <script src="./index.js"></script>
 </body>

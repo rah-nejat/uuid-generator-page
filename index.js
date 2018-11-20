@@ -1,4 +1,11 @@
 import uuid from 'uuid/v4';
+import ClipboardJS from 'clipboard';
+
+const clipboard = new ClipboardJS('#copy');
+
+clipboard.on('success', (event) => {
+    event.clearSelection();
+});
 
 const text = document.getElementById('uuid');
 const button = document.getElementById('generate');
@@ -14,6 +21,17 @@ button.onclick = function(event) {
         history.pop();
     }
     updateHistory();
+
+    // new ClipboardJS('#uuid', {
+    //     text: function(trigger) {
+    //         console.log(trigger);
+    //         return trigger.getAttribute('aria-label');
+    //     },
+    //     target: function(trigger) {
+    //         console.log(trigger);
+    //         return trigger.nextElementSibling;
+    //     }
+    // });
 }
 
 function updateHistory() {
